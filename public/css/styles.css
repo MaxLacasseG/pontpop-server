@@ -1,0 +1,111 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+h3,
+h4 {
+  color: #eb343c;
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header {
+  background-color: #1b2948;
+  border-bottom: 5px solid #ffd200;
+}
+
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 4rem;
+  border-bottom: 3px solid #ffd200;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.data-container {
+  max-height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 5em;
+}
+
+@media screen and (max-width: 1920px) {
+  .data-container {
+    max-height: 70vh;
+    padding: 0 2.5em;
+  }
+}
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 30%;
+  padding: 0.4em;
+  border-radius: 10px;
+}
+
+.data:nth-of-type(2n) {
+  background-color: #9ecee3;
+}
+
+.data .data-rank {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%;
+}
+
+.data .data-name {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 1920px) {
+  .data {
+    font-size: 1em;
+  }
+}
+
+.data-header {
+  padding-left: 5em;
+}
+
+.countdown-container {
+  padding: 3em;
+}
+/*# sourceMappingURL=styles.css.map */

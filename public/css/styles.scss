@@ -1,0 +1,85 @@
+$base-color: #1b2948;
+$base-color2: #ffd200;
+$base-color3: #ffffff;
+$base-color4: #eb343c;
+$base-color5: #63b0d2;
+
+$font1: "Raleway", sans-serif;
+$font2: "Open Sans", sans-serif;
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+}
+h1,
+h2 {
+    font-family: $font1;
+    color: $base-color3;
+    font-weight: 800;
+}
+
+h3,
+h4 {
+    color: $base-color4;
+    font-weight: 800;
+    font-family: $font2;
+}
+
+.header {
+    background-color: $base-color;
+    border-bottom: 5px solid $base-color2;
+}
+h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 4rem;
+    border-bottom: 3px solid $base-color2;
+}
+h4 {
+    font-size: 1.4rem;
+}
+
+.data-container {
+    max-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 5em;
+
+    @media screen and (max-width: 1920px) {
+        max-height: 70vh;
+        padding: 0 2.5em;
+    }
+}
+.data {
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
+    padding: 0.4em;
+    border-radius: 10px;
+    &:nth-of-type(2n) {
+        background-color: lighten($base-color5, 15%);
+    }
+    & .data-rank {
+        flex: 0 0 15%;
+    }
+    & .data-name {
+        flex: 0 0 50%;
+        padding-right: 5px;
+    }
+    @media screen and (max-width: 1920px) {
+        font-size: 1em;
+    }
+}
+.data-header {
+    padding-left: 5em;
+}
+.countdown-container {
+    padding: 3em;
+}
