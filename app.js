@@ -88,6 +88,33 @@ app.post("/create-teams", function(req, res) {
         });
 });
 
+app.delete("/delete-teams", function(req, res) {
+    GameController.DeleteMany(req.query)
+        .then(saveData => {
+            console.log(saveData);
+
+            return res.send("Enregistrement réussi");
+        })
+        .catch(err => {
+            console.log(err);
+
+            return res.send(err);
+        });
+});
+app.delete("/all", function(req, res) {
+    GameController.DeleteMany(req.query)
+        .then(saveData => {
+            console.log(saveData);
+
+            return res.send("Enregistrement réussi");
+        })
+        .catch(err => {
+            console.log(err);
+
+            return res.send(err);
+        });
+});
+
 //404 page catch all
 app.get("/*", function(req, res) {
     res.sendFile(path.join(__dirname + "/index.html"));
