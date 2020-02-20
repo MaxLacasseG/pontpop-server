@@ -88,6 +88,34 @@ controller.DeleteMany = ids => {
             throw err;
         });
 };
+controller.CreateMany = async gameInfos => {
+    const tab = gameInfos.gameInfos.map(g => {
+        return new Promise((resolve, reject) => {
+            const newGameInfos = new GameData(g);
+            return newGameInfos
+                .save()
+                .then(res => {
+                    resolve(res);
+                })
+                .catch(err => {
+                    reject(err);
+                });
+        });
+    });
+
+    return await Promise.all(tab)
+        .then(resTab => {
+            console.log(resTab);
+
+            return resTab;
+        })
+        .catch(err => {
+            console.log(err);
+
+            return err;
+        });
+};
+
 controller.DeleteAll = () => {
     return GameData.deleteMany({})
         .then(res => {

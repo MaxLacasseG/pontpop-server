@@ -9,7 +9,7 @@ const GameDataSchema = new Schema({
     team_name: { type: String },
     team_pwd: { type: String, required: true, select: false },
     score: { type: Number, default: null },
-    attempts: { type: Number, default: 10 }
+    attempts: { type: Number, default: 3 }
 });
 
 GameDataSchema.pre("save", function(next) {

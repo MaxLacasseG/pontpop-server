@@ -103,7 +103,7 @@ app.delete("/delete-teams", function(req, res) {
         });
 });
 app.delete("/all", function(req, res) {
-    GameController.DeleteMany(req.query)
+    GameController.DeleteAll()
         .then(saveData => {
             console.log(saveData);
 
