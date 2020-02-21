@@ -32,7 +32,7 @@ controller.GetData = dataInfos => {
 };
 
 controller.SaveData = gameInfos => {
-    const isFinalEnded = moment().isAfter(moment("2020-02-20 13:30:00"));
+    const isFinalEnded = moment().isAfter(moment("2020-02-24 12:30:00"));
 
     const { gameId, team_number, score, team_pwd } = gameInfos;
     return GameData.find({ gameId, team_number })
